@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    /* Primary */
+    --Cyan: hsl(179, 62%, 43%);
+    --BrightYellow: hsl(71, 73%, 54%);
+
+    /* Neutral */
+    --LightGray: hsl(204, 43%, 93%);
+    --GrayishBlue: hsl(218, 22%, 67%);
+
+    /* Opacity */
+    --opacityCyan: hsla(179, 62%, 43% , 0.75);
+}
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    background: var(--LightGray);
+}
+
+.attribution {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    width: 650px;
+    height: 450px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.first {
+    padding: 30px 80px 30px 40px;
+}
+
+.first h1 {
+    color: var(--Cyan);
+}
+
+.first h2 {
+    font-size: 18px;
+    color: var(--BrightYellow);
+    margin-top: 20px;
+}
+
+.first p {
+    color: var(--GrayishBlue);
+    margin-top: 10px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.row {
+    display: flex;
+}
+
+.col {
+    flex-basis: 50%;
+}
+
+.col:first-child{
+    background: var(--Cyan);
+    padding: 35px 40px 30px 40px;
+    height: 300px;
+}
+
+.col h3 {
+    color: white;
+}
+
+.col h4 {
+    font-size: 36px;
+    color: white;
+    margin-top: 10px;
+}
+
+.col h4 span {
+    font-size: 16px;
+    font-weight: 300;
+    position: relative;
+    bottom: 5px;
+}
+
+.col p {
+    color: white;
+    margin-top: 9px;
+}
+
+.button {
+    margin-top: 29px;
+    background:hsl(71, 73%, 54%);
+    padding: 17px 0px 17px 0px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Karla', sans-serif;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 0px 2px 5px var(--GrayishBlue);
+}
+
+.col:nth-child(2) {
+    background: var(--opacityCyan);
+    padding: 35px 40px 30px 40px;
+}
+
+.col:nth-child(2) p {
+    font-size: 15px;
+    margin-top: 3px;
+}
+
+.wrap {
+    margin-top: 18px;
+}
+
+@media(max-width: 768px) {
+    .container {
+        width: 320px;
+        height: auto;
+    }
+
+    .first {
+        padding: 30px 20px 20px 20px;
+    }
+
+    .first h1 {
+        font-size: 20px;
+    }
+
+    .first p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .attribution {
+        bottom: -15px;
+    }
+}
